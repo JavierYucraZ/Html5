@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS3</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+	
+	<!-- Selectores : Nos indican sobre que elementos se aplicaran un grupo de reglas de estilos -->
+	<!-- Selectores basicos :
+	Selectores de tipo : Selecciona todos los elementos que coincidan con el nombre de una etiqueta
+	Selectores de clase : Selecciona todos los elementos que coincidan con el nombre de una clase
+	Selectores de ID : Selecciona el elemento que tiene el nombre del ID
+	Selector Universal : * Selecciona todas las etiquetas
+	Selector de atributo : Selecciona elementos dependiendo el atributo que indiquemos -->
+
+	<article>
+		<section title="mi primer titulo">
+			Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Inventore, molestias. Consectetur, maiores pariatur recusandae, nobis vel architecto. Suscipit quidem consectetur quam doloribus deleniti, fugit porro, repellat id odio ipsum veniam.
+		</section>
+		<hr>
+		<div title="este es otro titulo">
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic quas deleniti aliquid repudiandae accusamus exercitationem velit doloremque iste quaerat laboriosam.
+		</div>
+		<hr>
+		<aside title="aqui ponemos un titulo">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam vero natus vitae animi adipisci sed facilis maxime omnis! Adipisci quidem quod autem molestias maiores. Sequi inventore ex, voluptates unde eius mollitia! Doloremque nulla, saepe dolor, error earum dolorem ab accusamus.
+		</aside>
+		<ul>
+			<li class="uno">Uno</li>
+			<li class="dos">Dos</li>
+			<li id="tres">Tres</li>
+			<li id="cuatro">Cuatro</li>
+			<li class="cinco">Cinco</li>
+		</ul>
+	</article>
+
+	<!-- Selectores avanzados o tambien conocidos como combinadores
+	Selector hijo : Se representa por el simbolo >
+	Selector Hermano : Se representa por el simbolo de ~(virgulilla ALT + 126)
+	Selector adyacente : Se representa por el simbolo +
+	-->
+
+	 <hr>
+	<section id="hijo">
+		<p>
+			Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Quas ea excepturi illo ad, quaerat? Asperiores corporis numquam esse dolorum. Dolore labore pariatur velit illum ullam ipsa ea eaque necessitatibus quae.
+		</p>
+		<p>
+			Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Est tempore at quas excepturi. Temporibus doloribus quis vitae reiciendis officia, aspernatur voluptates vel velit ea nemo ut, itaque voluptatem minus sint.
+		</p>
+		<div>
+			<section>
+				<article>
+					<p>
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis corporis ex, saepe maiores aut obcaecati. Cupiditate expedita voluptas, error similique perferendis voluptates asperiores voluptatibus ad, nihil, veritatis totam itaque odio.
+					</p>
+				</article>
+			</section>
+		</div>
+	</section>
+
+	<hr>
+
+	<section id="hermano">
+		<h1>Titulo 1</h1>
+		<h2>Subtitulo</h2>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing, elit. Facere ducimus ullam quasi, deserunt obcaecati quis tenetur error recusandae pariatur dolore sint soluta sunt iste officiis earum laborum praesentium, neque odit!
+		</p>
+		<p>
+			Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Delectus id voluptatibus explicabo soluta amet expedita quia praesentium distinctio eaque ab deserunt maiores saepe, quo aperiam provident est dolor quae impedit.
+		</p>
+	</section>
+
+	<hr>
+
+	<section id="adyacente">
+		<h1>Titular 1</h1>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia temporibus voluptatem quibusdam aspernatur amet nostrum vitae commodi eius laborum reprehenderit adipisci quisquam possimus culpa obcaecati, atque repudiandae est tempora tenetur!
+		</p>
+		<p>
+			Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Quaerat odio corporis sed officiis fugit porro ducimus doloribus quidem fugiat ad iusto, sunt totam veniam aliquam pariatur voluptate, dolor facilis repellat.
+		</p>
+		<p>
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat fuga est aliquid accusamus corporis, mollitia earum delectus repudiandae, ea quam eum qui, iure itaque, fugit odit! Rem saepe quas id!
+		</p>
+	</section>
+
+	<!-- Pseudoclases -->
+    <!-- Son una caracteristica que tienen los selectores haciendo referencia al
+        estado en el que se encuentra dicho elemento 
+
+        :nth-child(n) umpteenth-child(enesimo hijo), con esta pseudoclase, podemos acceder al enesimo hijo de un contenedor para poder manipularlo -->
+
+    <table>
+      <thead>
+        <th>Columna 1</th>
+        <th>Columna 2</th>
+        <th>Columna 3</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Columna 1 Fila 1</td>
+          <td>Columna 2 fila 1</td>
+          <td>Columna 3 fila 1</td>
+        </tr>
+        <tr>
+          <td>Columna 1 Fila 2</td>
+          <td>Columna 2 fila 2</td>
+          <td>Columna 3 fila 2</td>
+        </tr>
+        <tr>
+          <td>Columna 1 Fila 3</td>
+          <td>Columna 2 fila 3</td>
+          <td>Columna 3 fila 3</td>
+        </tr>
+        <tr>
+          <td>Columna 1 Fila 4</td>
+          <td>Columna 2 fila 4</td>
+          <td>Columna 3 fila 4</td>
+        </tr>
+        <tr>
+          <td>Columna 1 Fila 4</td>
+          <td>Columna 2 fila 4</td>
+          <td>Columna 3 fila 4</td>
+        </tr>
+        <tr>
+          <td>Columna 1 Fila 4</td>
+          <td>Columna 2 fila 4</td>
+          <td>Columna 3 fila 4</td>
+        </tr>
+        <tr>
+          <td>Columna 1 Fila 4</td>
+          <td>Columna 2 fila 4</td>
+          <td>Columna 3 fila 4</td>
+        </tr>
+        <tr>
+          <td>Columna 1 Fila 4</td>
+          <td>Columna 2 fila 4</td>
+          <td>Columna 3 fila 4</td>
+        </tr>
+        <tr>
+          <td>Columna 1 Fila 4</td>
+          <td>Columna 2 fila 4</td>
+          <td>Columna 3 fila 4</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- empezando por el ultimo hijo last child -->
+    <ul>
+        <li>Primero</li>
+        <li>Segundo</li>
+        <li>Tercero</li>
+        <li>Cuarto</li>
+        <li>Quinto</li>
+    </ul>
+
+    <!-- checked -->
+    <input type="checkbox" checked>
+    <label for="">Check1</label>
+
+    <input type="checkbox">
+    <label for="">Check2</label>
+    
+    <input type="radio" name="genero">
+    <label for="">Masculino</label>
+
+    <input type="radio" name="genero">
+    <label for="">Femenino</label>
+
+    <!-- negacion -->
+    <div id="negacion">
+	    <p class="texto1">Parrafo 1</p>
+	    <p class="texto2">Parrafo 2</p>
+	    <p class="texto3">Parrafo 3</p>
+	    <p class="texto4">Parrafo 4</p>
+    </div>
+
+    <div id="hover">
+    	<h1>Hola mundo</h1>
+    </div>
+
+    <div id="transiciones">
+    	<span class="ninguno">Sin efecto</span> <br>
+    	<span class="lineal">Lineal</span><br>
+    	<span class="ease">Ease</span><br>
+    	<span class="ease-in">Ease-in</span><br>
+    	<span class="ease-out">Ease-out</span><br>
+    	<span class="ease-in-out">Ease-in-out</span><br>
+    	<span class="cubic-bezier">Cubic Bezier</span>
+    </div>
+
+    <!-- Flexbox -->
+    <!-- Es un nuevo estandar de diseño, viene de la palabras flexible y box, cajas flexibles, que nos ayuda manejar
+    nuestros contenidos de una forma mucho mas eficiente y ademas simplificando muchos conceptos que antes se manejaban
+    con los elementos flotantes y jugar con posicionamiento -->
+    <!-- Reglas para manejar flexbox
+    Necesita un padre y por lo menos un hijo -->
+
+    <section id="flex1">
+    	<article class="caja1">
+    		Caja 1
+    	</article>
+    	<article class="caja2">
+    		Caja 2
+    	</article>
+    	<article class="caja3">
+    		Caja 3
+    	</article>
+
+    	<!-- <article class="caja3">
+    		Caja 3
+    	</article>
+
+    	<article class="caja3">
+    		Caja 3
+    	</article>
+
+    	<article class="caja3">
+    		Caja 3
+    	</article>
+
+    	<article class="caja3">
+    		Caja 3
+    	</article>
+    	<article class="caja3">
+    		Caja 3
+    	</article>
+    	<article class="caja3">
+    		Caja 3
+    	</article>
+    	<article class="caja3">
+    		Caja 3
+    	</article>
+    	<article class="caja3">
+    		Caja 3
+    	</article>
+    	<article class="caja3">
+    		Caja 3
+    	</article>
+    	<article class="caja3">
+    		Caja 3
+    	</article> -->
+    </section>
+
+
+    <!-- Pseudo elementos -->
+    <!-- Nos permiten hacer referencia a partes del contenido de una etiqueta -->
+    <section id="pseudo">
+      <h1>
+        Hola mundo
+      </h1>
+      <h2>
+        Subitutlo
+      </h2>
+      <p>
+        Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Totam natus praesentium, molestias sit cupiditate sequi enim, ut possimus debitis fugit nesciunt cumque commodi laudantium, corporis repellendus voluptatem! Eaque eligendi et quaerat, qui laborum soluta, rerum hic tempore ut aut. Quasi dolore est atque iusto reiciendis expedita sunt quos? Voluptatem sunt explicabo facilis provident eos, eveniet voluptas aut deleniti incidunt atque, ad? Molestias odit repellendus consectetur suscipit enim dolorem fugit perspiciatis. Atque aut reiciendis voluptatibus cumque odio fugit vel placeat natus odit ducimus quidem earum facilis, accusamus laboriosam quas quod alias deleniti eaque, quam asperiores perferendis necessitatibus, eius in libero? In!
+      </p>
+
+      <label for="">Nombre</label>
+      <input type="text" placeholder="Ingrese su nombre">
+
+      <label for="">Apellido</label>
+      <input type="text" placeholder="Ingrese su apellido">
+    </section>
+
+    <section id="fondos">
+      <center>
+        <h1>Hola mundo</h1>
+      </center>
+    </section>
+
+</body>
+</html>

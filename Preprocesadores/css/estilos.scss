@@ -1,0 +1,168 @@
+$color1 : #f0f2cf;
+$color2 : #acc9ad;
+$color3 : #6f9e93;
+$color4 : #3b737a;
+$color5 : #0C1F36;
+
+// un mixin lo interpretaremos como un esquema
+// que otras propiedades pueden utilizar
+// asi estandarizamos un poco nuestro codigo
+
+@mixin margin1($total){
+	margin: $total;
+}
+
+@mixin margin2($arriba, $abajo, $izquierda, $derecha){
+	margin: $arriba $derecha $izquierda $abajo;
+}
+
+@mixin margin3($aa, $id){
+	margin: $aa $id;
+}
+
+@mixin padding1($total){
+	padding: $total;
+}
+
+@mixin padding2($arriba, $abajo, $izquierda, $derecha){
+	padding: $arriba $derecha $izquierda $abajo;
+}
+
+@mixin padding3($aa, $id){
+	padding: $aa $id;
+}
+
+
+*{
+	@include padding1(0);
+	@include margin1(0);
+	font-family: 'Commissioner', sans-serif;
+}
+
+body{
+	background-color: #F0F2CF;
+}
+
+header{
+	width: 95%;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-image: linear-gradient(to left, $color1, $color2, $color3, $color4, $color5);
+}
+
+header>h1{
+	@include padding3(0, 25px);
+	color: #F0F2CF;
+}
+
+nav{
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav>ul>li{
+	display: inline;
+	list-style: none;
+	@include margin3(0, 15px);
+}
+
+nav>ul>li>a{
+	text-decoration: none;
+	@include padding3(5px, 10px);
+	color : #0C1F36;
+	font-size: 20px;
+	transition: 0.5s;
+}
+
+nav>ul>li>a:hover{
+	box-shadow: 0 5px 10px 1px rgba(0,0,0,0.7);
+	transition: 0.5s;
+}
+
+main{
+	width: 95%;
+	margin: 15px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.noticias{
+	display: flex;
+	justify-content: space-around;
+	text-align: justify;
+}
+
+.noticias>section{
+	margin: 15px 55px;
+}
+
+footer{
+	background-color: rgba(127, 191,161, 0.2);
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0;
+}
+
+footer li{
+	display: inline;
+	list-style: none;
+}
+
+footer>ul>li{
+	margin: 0 15px;
+	font-size: 25px;
+}
+
+.fa{
+	padding: 10px;
+}
+
+.fa-facebook{
+	color: #3b5998;
+	transition: .5s;
+}
+
+.fa-facebook:hover{
+	background-color: #3b5998;
+	color: #fff;
+	transition: .5s;
+}
+
+.fa-instagram{
+	color: #cb6875;
+	transition: .5s;
+}
+
+.fa-instagram:hover{
+	background-image: linear-gradient(to left bottom, #fde929, #ffc00d, #ff9520, #ff6738, #ff334e);
+	color: #fff;
+	transition: .5s;
+}
+
+.fa-twitter{
+	color: #55acee;
+	transition: .5s;
+}
+
+.fa-twitter:hover{
+	background-color: #55acee;
+	color: #fff;
+	transition: .5s;
+}
+
+.fa-youtube-play{
+	color: #cb2027;
+	transition: .5s;
+}
+
+.fa-youtube-play:hover{
+	background-color: #cb2027;
+	color: #fff;
+	transition: .5s;
+}

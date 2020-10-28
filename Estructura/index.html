@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Raleway:wght@500&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	
+	<!-- 
+		Teoricamente nosotros solo deberiamos usar una etiqueta de titular por cada seccion
+		de otro modo, estas etiquetas pierden su prioridad afectando su buen posicionamiento en la web, para esto tenemos
+		las etiquetas hgroup(heading group, agrupador de encabezados), lo que nos permite usar mayor cantidad de etiquetas heading en la pagina  -->
+	<header>
+		<hgroup>
+			<h1>Pagina en html 5</h1>
+			<h2>Este es un subtitulo</h2>
+		</hgroup>
+	</header>
+
+
+	<nav>
+		<ul>
+			<li><a href="#">Enlace 1</a></li>
+			<li><a href="#">Enlace 2</a></li>
+			<li><a href="#">Enlace 3</a></li>
+			<li><a href="#">Enlace 4</a></li>
+		</ul>
+	</nav>
+
+	<!-- investigar casos de uso entre article y section, yo les estoy dando un poco el contexto en el cual se usa
+	pero me gustaria que ustedes conceptualicen un poco mas sobre estas etiquetas
+	de todas formas no hay una regla estricta que te diga debes estructurar tu pagina de esta forma y solo de esta forma, como explique en alguna clase, es como si estuvieramos escribiendo una texto, si queremos que el lector tenga mas facilidad al entender lo que queremos transmitirle, entonces es recomendable poner signos de puntuacion-->
+
+	<!-- Tenemos que tener en cuenta, que mientras mas seccionado este nuestro codigo, mas facil de mantener, escalar y editar resulta -->
+	<main>
+		<article>
+			<hgroup>
+				<h1>Parte principal de la pagina</h1>
+				<h2>Subtitulo de la pagina principal</h2>
+			</hgroup>
+
+			
+			
+			<section>
+				<h3>Primera seccion</h3>
+				<iframe width="100%" height="450" src="https://www.youtube.com/embed/ryUxrFUk6MY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</section>
+
+			
+			
+			<section>
+				<h3>Segunda seccion</h3>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d61203.49319407958!2d-68.15088639999999!3d-16.515072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sbo!4v1602186133518!5m2!1ses!2sbo" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</section>
+
+			
+
+			<section>
+				<h3>Tercera seccion</h3>
+				<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/319656316&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+				<div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/ilyanaazman" title="ilyana azman" target="_blank" style="color: #cccccc; text-decoration: none;">ilyana azman</a> · <a href="https://soundcloud.com/ilyanaazman/sets/best-of-mrrevillz" title="Best Of MrRevillz" target="_blank" style="color: #cccccc; text-decoration: none;">Best Of MrRevillz</a></div>
+			</section>
+		</article>
+
+		<aside>
+			<div class="anuncio">
+				<hgroup>
+					<h1>Espacio para publicidad</h1>
+					<h2>Anunciate aqui</h2>
+				</hgroup>
+				
+				<div id="imagen">
+					<h3>Imagen del sitio</h3>
+					<img src="media/image.jpg" width="100%">
+				</div>
+
+				<div id="video">
+					<h3>Video de la pagina</h3>
+					<video controls poster="media/image.jpg">
+						<source src="media/video.mp4" type="video/mp4">
+					</video>					
+				</div>
+
+				<div id="audio">
+					<h3>Single demostrativo</h3>
+					<audio src="media/sound.mp3" controls>
+						
+					</audio>
+				</div>
+			</div>
+		</aside>
+
+	</main>
+
+
+	<footer>
+		<hgroup>
+			<h3>Estructura estandar de un sitio web creado en html 5</h3>
+			<h4>Para saber mas, sigue nuestras redes sociales</h4>
+		</hgroup>
+		<ul>
+			<li><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
+			<li><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+			<li><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
+		</ul>
+	</footer>
+
+</body>
+</html>

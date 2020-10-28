@@ -1,0 +1,210 @@
+<!-- 
+	Cuando un proyecto empieza a crecer demasiado, generalmente su archivo de estilos va creciendo al mismo o incluso mayor ritmo, en estos casos suele ser necesario empezar a utilizar valores predefinidos para reutilizarlos a lo largo del codigo css, asi por ejemplo definimos la gama de colores que utilizaremos en todas las zonas, los anchos, altos, fuentes, etc, asi el proyecto es mas sostenible y escalable
+	Para lograr esto, tenemos varias herramientas, las que veremos son
+	Uso de variables directamente en css
+	Uso de variables utilizando preprocesadores como Sass y Less
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- build:css css/estilos.css -->
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/carousel.css" />
+    <!-- endbuild -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Esta es mi pagina</h1>
+      <nav>
+        <ul>
+          <li><a href="">Enlace 1</a></li>
+          <li><a href="">Enlace 2</a></li>
+          <li><a href="">Enlace 3</a></li>
+          <li><a href="">Enlace 4</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="carousel">
+      <div id="fondo1"></div>
+      <div id="fondo2"></div>
+      <div id="fondo3"></div>
+      <div id="fondo4"></div>
+    </div>
+
+    <main>
+      <article>
+        <hgroup>
+          <center>
+            <h1>Titulo 1</h1>
+            <h1>Subtitulo</h1>
+          </center>
+        </hgroup>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis vitae
+          vero autem quibusdam pariatur deserunt molestiae facere nihil.
+          Assumenda repellat facilis maiores ratione culpa optio quam cum
+          quaerat odio, totam. Totam veritatis, fugit mollitia quae itaque
+          temporibus minus molestiae laudantium quaerat sunt? Excepturi, maxime.
+          Delectus facere dicta, placeat. Recusandae molestias dignissimos quos
+          accusamus cumque, itaque, hic provident quod fuga culpa non sapiente
+          maiores tenetur voluptate repudiandae dolor magnam ab adipisci,
+          quaerat ipsa sed modi incidunt facere et. Expedita totam, quidem
+          voluptatum? Cumque unde a corrupti aliquid, iure ab iusto aperiam eius
+          soluta illo quidem itaque velit! Nostrum autem et iste!
+        </p>
+      </article>
+
+      <article class="noticias">
+        <section>
+          <hgroup>
+            <h1>Titulo 1</h1>
+            <h1>Subtitulo</h1>
+          </hgroup>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur, adipisicing elit.
+            Voluptatem sint, a repellendus rem cum omnis odit error quis libero
+            itaque ab accusantium, fugit quo culpa, nihil iusto debitis hic,
+            velit nostrum. Blanditiis rem quos sunt dignissimos, optio sit
+            quaerat sint omnis excepturi, quis. Excepturi perspiciatis quasi
+            amet iusto veritatis sint.
+          </p>
+          <a href="">Leer mas</a>
+        </section>
+        <section>
+          <hgroup>
+            <h1>Titulo 1</h1>
+            <h1>Subtitulo</h1>
+          </hgroup>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur, adipisicing elit.
+            Voluptatem sint, a repellendus rem cum omnis odit error quis libero
+            itaque ab accusantium, fugit quo culpa, nihil iusto debitis hic,
+            velit nostrum. Blanditiis rem quos sunt dignissimos, optio sit
+            quaerat sint omnis excepturi, quis. Excepturi perspiciatis quasi
+            amet iusto veritatis sint.
+          </p>
+          <a href="">Leer mas</a>
+        </section>
+      </article>
+
+      <article class="noticias">
+        <section>
+          <hgroup>
+            <h1>Titulo 1</h1>
+            <h1>Subtitulo</h1>
+          </hgroup>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur, adipisicing elit.
+            Voluptatem sint, a repellendus rem cum omnis odit error quis libero
+            itaque ab accusantium, fugit quo culpa, nihil iusto debitis hic,
+            velit nostrum. Blanditiis rem quos sunt dignissimos, optio sit
+            quaerat sint omnis excepturi, quis. Excepturi perspiciatis quasi
+            amet iusto veritatis sint.
+          </p>
+          <a href="">Leer mas</a>
+        </section>
+        <section>
+          <hgroup>
+            <h1>Titulo 1</h1>
+            <h1>Subtitulo</h1>
+          </hgroup>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur, adipisicing elit.
+            Voluptatem sint, a repellendus rem cum omnis odit error quis libero
+            itaque ab accusantium, fugit quo culpa, nihil iusto debitis hic,
+            velit nostrum. Blanditiis rem quos sunt dignissimos, optio sit
+            quaerat sint omnis excepturi, quis. Excepturi perspiciatis quasi
+            amet iusto veritatis sint.
+          </p>
+          <a href="">Leer mas</a>
+        </section>
+      </article>
+    </main>
+
+    <hr />
+
+    <footer>
+      <hgroup>
+        <h1>Redes sociales</h1>
+      </hgroup>
+      <ul>
+        <li>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-youtube-play"></i></a>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- 
+	instalamos nodejs, es un entorno de trabajo que tiene muchas caracteristicas importantes para el desarrollo web, pero en este caso solo usaremos su gestor de paquetes que nos permitira instalar algunas librerias de manera automatizada 
+	npm init -y 
+	-->
+
+    <!--
+		npm install node-sass --save-dev 
+		Instalaremos sass (o scss), es un preprocesador de estilos, que nos permite trabajar con caracteristicas que css no tiene, veremos solo parte basica, pues sass se asemeja a un lenguaje de programacion donde podemos poner condicionales, funciones con parametros y sin parametros y variables
+
+		y agregamos una tarea para que cada que vez que se ejecute un cambio, se pueda compilar a codigo css, pues los navegadores no pueden interpretar archivos sass
+		
+		"compilar" : "node-sass -o css/ css/"
+		para ejecutar
+		npm run compilar
+
+		npm install --save-dev onchange
+
+		onchange : nos permite monitorear cambios en archivos que nosotros especifiquemos y ejecutar alguna accion cuando ocurra este cambio
+
+		"observador": "onchange css/*.scss -- npm run compilar"
+	
+		Empezamos a crear una version distribuible
+
+		Nuestro proyecto de esta forma podria considerarse listo para llevarse a un ambiente de produccion
+		Pero tambien con ayuda de algunas librerias podemos mejorarlo mucho mas, asi minificando codigo, optimizando algunas imagenes y esa seria una version distribuible mucho mas eficiente
+
+		npm install --save-dev copyfiles
+
+		copyfiles : Nos ayuda a mover archivos de una carpeta a otra
+
+		npm install --save-dev imagemin-cli --unsafe-perm=true --allow-root
+
+		imagemin-cli : nos ayuda con el tema de las imagenes, las comprime hasta cierto punto de modo que pesen menos, pero no pierdan calidad
+		A veces suele generar algun error al momento de comprimir las imagenes por tema de permisos, es por eso que agregamos esas opciones
+
+		"comprimir" : "imagemin images/* --out-dir dist/images"
+		
+		npm install --save-dev rimraf
+
+		rimraf : nos permite realizar la limpieza de una carpeta, para que nos sirve? cuando estemos creando la version de distribucion, puede que hagamos cambios despues de terminado, ya sea por cualquier motivo, entonces deberiamos sobreescribir los archivos que van a produccion, para no hacer este trabajo manualmente una y otra vez, utilizamos rimraf
+
+		"limpiar" : "rimraf dist"
+
+		npm install --save-dev usemin-cli cssmin htmlmin
+		Nos permite minificar el codigo tanto de css como html
+
+		"minificar" : "usemin index.html -d dist --htmlmin -o dist/index.html"
+
+	-->
+  </body>
+</html>

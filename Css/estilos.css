@@ -1,0 +1,342 @@
+Tenemos 4 maneras principales de utilizar este selector
+atributo^="algo" busca todos los atributos con ese nombre y que empiecen en esa descripcion
+atributo$="algo" busca todos los atributos con ese nombre y que terminen con esa descripcion
+atributo*="algo" busca todos los atributos con ese nombre y que contengan en alguna parte esa descripcion */
+*[title="titulo"]{
+	color: red;
+}
+
+li[class]{
+	color: yellow;
+}
+
+/*Afecta unicamente a sus hijos directos*/
+#hijo>p{
+	color: firebrick;
+}
+
+#hermano>h1~p{
+	color: green;
+}
+
+/*Afecta a su primer hermano*/
+#adyacente>h1+p{
+	color: gray;
+}
+
+
+table{
+    border-collapse: collapse;
+    width: 50%;
+    text-align: center;
+}
+
+table>thead{
+    background-color: rgb(66, 66, 66);
+    color: rgb(238, 230, 230);
+}
+
+table>tbody>tr>td{
+    padding: 5px 0;
+}
+
+/* n+3 afectar con una regla, empezando en el 3er elemento */
+/* 4n afectar con una regla, cada 4to elemento */
+/* 2n+4 afectar con una regla, empezando por el 4to elemento, cada 2 elementos */
+/* odd afectar con una regla, tomando los elementos impares*/
+/* even afectar con una regla, tomando los elementos pares */
+table>tbody>tr:nth-child(odd){
+    background-color: rgb(168, 168, 168);
+}
+
+ul>li:last-child{
+    color: brown;
+}
+
+input[type="checkbox"]:checked+label{
+    color: darkseagreen;
+    background-color: dimgrey;
+    padding: 10px;
+}
+
+input[type="radio"]:checked+label{
+    color: gainsboro;
+    background-color: indigo;
+    padding: 10px;
+}
+
+#negacion>p:not([class="texto2"]){
+    color: lightcoral;
+}
+
+/*
+Investigar 5 pseudoclases adicionales y sus modos de uso	
+*/
+#hover>h1{
+	color: salmon;
+	font-size: 35px;
+	/*propiedad sobre la que se aplica la transicion*/
+	transition-property: font-size;
+	/*tiempo de duracion de la animacion*/
+	transition-duration: 2s;
+	/*Funcion de aceleracion de la transicion*/
+	transition-timing-function: ease-in;
+	/*Retraso para empezar la animacion*/
+	transition-delay: 0.5s;
+}
+
+#hover>h1:hover{
+	color: fuchsia;
+	font-size: 40px;
+	transition: font-size 2s ease-in-out 0.5s;
+}
+/*https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes*/
+/*Investigar al menos 5 pseudoclases diferentes y utilizarlas cada una en un ejemplo*/
+
+/*Existen 6 tipos de funciones aceleradoras, la principal y de la que van heredando las demas
+es cubic bezier, basado en una curva bezier, para no entrar en detalles tecnicos
+podemos decir que una curva bezier nos ayuda a modificar el comportamiento de un trazado*/
+
+#transiciones{
+	border: 1px solid black;
+	padding: 10px;
+}
+
+#transiciones>span{
+	background: gray;
+	color: white;
+}
+
+
+#transiciones:hover>span{
+	margin-left: 70%;
+}
+
+.lineal{
+	transition: all 3s linear;
+}
+
+.ease{
+	transition: all 3s ease;
+}
+
+.ease-in{
+	transition: all 3s ease-in;
+}
+
+.ease-out{
+	transition: all 3s ease-out;
+}
+
+.ease-in-out{
+	transition: all 3s ease-in-out;
+}
+
+.cubic-bezier{
+	transition: all 3s cubic-bezier(1,-0.5,0.5,1);
+}
+
+/*https://riptutorial.com/es/css/example/7628/cubico-bezier*/
+/*https://cubic-bezier.com/*/
+
+
+section#flex1{
+	width: 350px;
+	height: 350px;
+	border: 1px solid black;
+	margin: 0 auto;
+	/*vimos las propiedades inline y block*/
+	/*que ocasiona la propiedad display : flex*/
+	/*aplicando la propiedad display : flex, hace que sus hijos, ocupen el ancho necesario segun su contenido
+	pero ocuparan todo el alto que tenga el padre*/
+	/*Conoceremos al padre como flex container y a los hijos como flex items*/
+	display: flex;
+	/*orientacion de los hijos, por defecto la orientacion viene en vertical (row), el eje principal es la parte superior del padre, pero podemos cambiar esto para verlos de manera horizontal
+	column, ubica los hijos apilados uno sobre otro tomando como referencia inicial la parte superior de su contenedor
+	column-reverse, lo mismo que column, pero toma como referencia la parte inferior de su contenedor
+	row, ubica los elementos en filas, uno a lado de otro, tomando como referencia el borde izquierdo
+	row-reverse, lo mismo que row, pero toma como referencia el borde derecho*/
+	flex-direction: row;
+	/*Si el flex container tiene demasiados hijos, entonces puede llegar un punto en el que esten tan aglomerados que el diseño quede mal, o simplemente puede pasar que el contenedor no pueda contenerlos mas y genere un desbordamiento
+	esto lo podemos controlar con la propiedad flex-wrap : wrap, que hace que el contenedor se vaya diviendo de tal manera que a cada uno de sus hijos le vaya dando su espacio*/
+	flex-wrap: wrap;
+	/*alineacion en horizontal, podemos alinear todo al centro, todo a la izquierda(por defecto), a la derecha, 
+	con un espacio en medio o con un espacio al redededor*/
+	
+	/*justify-content: space-around;*/
+
+	/*alineacion en vertical, podemos alinear el contenido de diferentes maneras
+	por defecto viene con stretch, que es la propiedad que le da permite ocupar el 100% del alto del contenedor
+	flex-start : solo ocupa el espacio necesario y se alinea en la parte superior
+	flex-end : se alinea en la parte inferior
+	center : esta propiedad aunque no lo parezca, es la mas importante, en css tradicional, nunca teniamos una propiedad tan clara y facil de utilizar para poder centrar elementos en un contenedor, debiamos manejar posiciones flotantes, medidas porcentuales y mas combinaciones de propiedades para lograr ese centrado en vertical e incluso ni asi podiamos estar seguros que funcionaria en todos las pantallas, realmente era un trabajo muy dificil*/
+	align-items: stretch;
+
+	/*ahora, todas estas alineaciones se muestran de esta manera pues la direccion que estamos manejando es en fila, osea tomando como eje principal la parte superior del padre, pero si cambiamos la direccion a columna, entonces el eje principal cambia y se posiciona al lado derecho del padre*/
+
+	/*float: right;*/
+
+	/*En caso de que tuvieramos varias lineas gracias a flex wrap, puede existir ocasiones en que necesitemos alinear en varias lineas, en lugar de estar asignando alineaciones por separado a cada hijo, podemos asignar una alineacion para todas las lineas con align-content*/
+	/*align-content: center;*/
+}
+
+/*alineacion de forma individual de cada hijo
+align-self : que recibe las mismas reglas que align items*/
+
+/*Tambien vale recalcar que todos los hijos de un contenedor flexible, ignoran todas las propiedades flotantes, esto quiere decir que no podemos aplicar float : .. ni clear : .., sin embargo, el padre si puede recibir propiedades flotantes, no hay que olvidar que estamos afectando unicamente a los hijos*/
+
+/*Tambien podemos ordenar a cada uno de los hijos y posicionarlos como mejor nos convenga con la propiedad order*/
+
+/*podemos controlar que espacio ocuparan los hijos en el contenedor utilizando la propiedad flex-grow
+esta propiedad trabaja en base a los hermanos, por defecto todos tienen un flex-grow de 0, esto quiere decir que ocupen solo el espacio de su contenido*/
+.caja1{
+	flex-grow: 1;
+	/*order: 3;*/
+	/*align-self: flex-end;*/
+	background-color: blue;
+}
+
+.caja2{
+	flex-grow: 3;
+	/*order: 2;*/
+	/*align-self: center;*/
+	background-color: green;
+}
+
+.caja3{
+	flex-grow: 1;
+	/*order: 1;*/
+	/*align-self: stretch;*/
+	background-color: tan;
+}
+
+.caja4{
+	background-color: pink;
+}
+
+.caja5{
+	background-color: orange;
+}
+
+
+/*http://flexbox.help/*/
+
+#pseudo>p::first-line{
+	color: darkred;
+}
+
+#pseudo>p::first-letter{
+	color: green;
+	font-size: 35px;
+}
+
+/*alt+4 diamante*/
+#pseudo>h1::after{
+	content: '♦';
+}
+
+#pseudo>h1::before{
+	content: '♦';
+}
+
+#pseudo>h2{
+	text-align: center;
+}
+
+#pseudo>h2::after{
+	content: '';
+	display: block;
+	margin: auto;
+	width: 200px;
+	background-color: orange;
+	height: 2px;
+	margin-top: 10px;
+}
+
+#pseudo>input{
+	/*background-color: black;*/
+	/*color: white;*/
+	width: 200px;
+	padding: 5px;
+	border: 1px solid seagreen;
+	border-radius: 5px;
+	transition: 0.5s ease-in;
+}
+
+#pseudo>input:focus{
+	width: 300px;
+	/*5 argumentos
+	posicionamiento en horizontal
+	posicionamiento en vertical
+	radio de difuminacion
+	radio de propagacion
+	https://www.cssmatic.com/box-shadow*/
+	box-shadow: 10px 10px 28px 0px rgba(0,0,0,0.75);
+	transition: 0.5s ease-in;
+}
+
+#pseudo>input::placeholder{
+	color: gray;
+	font-style: italic;
+}
+
+#pseudo>input::selection{
+	background-color: slateblue;
+}
+
+
+#fondos{
+	width: 600px;
+	height: 600px;
+	margin: auto;
+	border: 5px dotted black;
+	/*Hacia la derecha
+	Color inicial -> color final, se puede usar cualquier combinacion de colores y cualquier cantidad de colores*/
+	/*background-image: linear-gradient(to right, #5e2b66, #e1e5d7);*/
+	/*Hacia la izquierda*/
+	/*background-image: linear-gradient(to left, #5e2b66, #974e64, #b58171, #c7b59b, #e1e5d7);*/
+	/*Hacia arriba*/
+	/*background-image: linear-gradient(to top, #5e2b66, #974e64, #b58171, #c7b59b, #e1e5d7);*/
+	/*Hacia abajo*/
+	/*background-image: linear-gradient(to bottom, #5e2b66, #974e64, #b58171, #c7b59b, #e1e5d7);*/
+
+	/*De la esquina inferior derecha hacia arriba*/
+	/*background-image: linear-gradient(to right top, #5e2b66, #974e64, #b58171, #c7b59b, #e1e5d7);*/
+
+	/*De la esquina superior derecha hacia abajo*/
+	/*background-image: linear-gradient(to right bottom, #5e2b66, #974e64, #b58171, #c7b59b, #e1e5d7);*/
+
+	/*De la esquina superior izquierda hacia abajo*/
+	/*background-image: linear-gradient(to left bottom, #5e2b66, #974e64, #b58171, #c7b59b, #e1e5d7);*/
+	
+	/*De la esquina inferior izquierda hacia arriba*/
+	/*background-image: linear-gradient(to left top, #5e2b66, #974e64, #b58171, #c7b59b, #e1e5d7);*/
+
+	/*En circular*/
+	/*background-image: radial-gradient(circle, #5e2b66, #974e64, #b58171, #c7b59b, #e1e5d7);*/
+
+	background-image: url(road-220058.jpg);
+
+	/*Define la posicion de la imagen se mostrara
+	center,top,bottom, left, rigth y/o porcentajes*/
+	background-position: center;
+	/*Define el tamaño de la imagen
+	contain : Acomoda la imagen en su tamaño real sin importar que no ocupe el tamaño completo de su contenedor
+	cover : Acomoda la imagen de modo que ocupe todo el ancho de su contenedor */
+	background-size: contain;
+
+	/*Define si la imagen tendra o no tendra repeticion
+	puede repetir en el eje x
+	puede repetir en el eje y
+	sin repeticion*/
+	background-repeat: no-repeat;
+
+	/*Define si la posicion de la imagen estara fija o se desplaza junto con su contenedor*/
+	background-attachment: fixed;
+
+	/*Define como se comportara la imagen o contenido respecto a sus margenes
+	para esto cambiamos a dotted
+	border-box : la imagen se extendera hasta estar debajo de su margen
+	padding-box : la imagen respetara los border y se mantendra dentro de ellos*/
+	background-clip: content-box;
+}

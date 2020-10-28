@@ -1,0 +1,455 @@
+<!-- Declaracion que define el tipo de documento sobre el que estamos trabajando -->
+<!DOCTYPE html>
+<!-- etiqueta principal, en la que podemos definir mediante un atributo el lenguaje en el que estara el contenido de nuestro sitio -->
+<html lang="es">
+<!-- Encabezado de nuestro documento
+aca asignamos ciertas configuraciones
+para nuestro sitio -->
+<head>
+	<!-- titulo de nuestra pagina web, se visualiza en la pestaña del navegador -->
+	<title>Document</title>
+	<!-- enlace o referencia a una hoja de estilos, todo aquello que le dara diseño
+	a nuestro sitio web
+	Rel es la relacion que tendra este enlace con nuestro documento -->
+	<link rel="stylesheet" href="estilos.css"/>
+	<!-- bloque de estilos que podemos aplicar a nuestro sitio -->
+	<style>
+		a{
+			text-decoration: none;
+			font-size: 25px;
+			border: 1px solid black;
+			/*
+			margenes
+			externos
+			*/
+			margin-top: 15px;
+			margin-bottom: 30px;
+			margin-left: 10px;
+			margin-right: 5px;
+			/*
+			margenes
+			internos
+			*/
+			/*padding: 40px 15px 40px 15px;*/
+			padding: 40px 15px;
+		}
+		p{
+			font-size: 25px;
+		}
+	</style>
+	<!-- icono que ira junto con el titulo de nuestra pagina -->
+	<link rel="icon" type="image/png" href="/imágenes/mifavicon.png" />
+	<!-- en html podemos definir ciertas caracteristicas de nuestro sitio con 
+	la ayuda de los metadatos -->
+	
+	<!-- Tambien son parte de las herramientas para optimizar nuestro sitio
+	en los motores de busqueda, con esta informacion tienen una mejor
+	indexacion y mejor posicionamiento -->
+
+	<!-- Metadatos -->
+	<!-- Juego de caracteres con el que se interpretara todo nuestro sitio web 
+		En español tenemos una serie de caracteres especiales que no siempre son
+		reconocidos como tal en todos los navegadores
+		entonces aca entran los juegos de caracteres que se encargan de estandarizar
+		esto para que nuestro sitio se lea igual en chrome, firefox, opera, safari.. 
+		y en cualquier navegador-->
+	<meta name="encoding" charset="utf-8"/>
+	
+	<!-- Nombre del autor -->
+	<!-- Siempre la debemos definir para acreditarnos la autoria del sitio -->
+	<meta name="author" content="Javier Yucra Z."/>
+	<!-- Descripcion de la pagina(hasta 160 caracteres, min 50) -->
+	<meta name="description" content="Curso de diseño y programacion de sitios web desde 0, con los siguientes modulos, html:5, css3, javascript, bootstrap, php, wordpress, joomla"/>
+	<!-- Palabras clave con referencias del sitio web(hasta 256 caracteres, min 8 palabras) -->
+	<!-- el sistema de busqueda en google tiene muchos factores para tomar en cuenta, uno de estos son las palabras clave, es por esto que debemos definir muy bien las palabras que pueden referenciar nuestro sitio, asi cuando alguien realice una busqueda nuestra pagina pueda aparecer entre los primeros resultados -->
+	<meta name="keywords" content="deporte, gimnasio, fitness, tae-bo, karate, aerobics.."/>
+	
+	<!-- Informacion de diseño adaptable(responsive) -->
+	<!-- ventana -->
+	<!-- escala inicial, escala maxima, escala minima -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+
+	<!-- Nombre de la aplicacion
+	generalmente no se declara cuando estamos en una pagina web, su uso se deberia limitar
+	a aplicaciones web
+	Primer trabajo de investigacion : 
+	diferencia entre pagina web y aplicacion web -->
+	<meta name="application-name" content="Estadisticas financieras" />
+
+	<!-- Nombre de la organizacion -->
+	<!-- Nombre de la organizacion a la que pertenece el sitio o aplicacion web -->
+	<meta name="organization" content="Organización S.A." />
+
+</head>
+<!-- Aqui empezamos con toda la estructura visible de nuestro sitio -->
+<body>
+
+	<!-- la mayoria de las etiquetas se componen tanto en una etiqueta de apertura
+	y una etiqueta de cierre pero existen etiquetas que como las meta, que pueden ser de apertura y cierre al mismo tiempo -->
+
+	<!-- Debemos procurar siempre mantener nuestro codigo equilibrado, siempre
+	que iniciemos una etiqueta contenedora, debemos cerrarla -->
+	
+	<!-- Algo que siempre necesitamos en nuestras paginas, son encabezados o titulares
+	que resalten mas que todo el contenido, para esto existen las etiquetas
+	heading -->
+	
+	<h1></h1>
+	<h6></h6>
+	
+	<!-- y obviamente esta su complemento, que vendria siendo el contenido como tal
+	para esto tenemos las etiquetas de parrafo -->
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione itaque cum impedit nobis quibusdam aliquam tempora eligendi omnis ad quasi, repudiandae, commodi maiores unde exercitationem nemo, dolorum repellat est veniam.
+	</p>
+	<!-- adicionalmente le podemos poner una especie de marcador que indique de que hablara
+	todo el parrafo, esto lo logramos con el atributo title -->
+	
+	<p title="texto de ayuda">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> <!-- break -->
+		Earum adipisci explicabo dolorem, doloribus alias excepturi reiciendis quam ex consequatur rerum blanditiis repellendus nostrum dolorum tempora dolore veritatis voluptatem quod fugit.
+	</p>
+	
+	<hr>
+	<pre>
+		Lorem 
+		ipsum 
+		dolor 
+		sit 
+		amet, consectetur adipisicing elit. Officiis, rem, temporibus. 
+		Distinctio officia dolorem recusandae, asperiores! Sed tenetur vero quos, voluptates 
+		architecto voluptatum natus sapiente provident accusamus neque a quod?
+	</pre>
+	<hr>
+
+	<!-- otra funcion que se utiliza mucho, son los enlaces, tanto para dirigirnos hacia otra pagina
+	de nuestro sitio web, como para ir a otros sitios web
+	anchor : anclas => hipervinculos -->
+	
+	<a href="https://www.google.com/" target="_blank">Este es un enlace</a>
+
+	<!-- para agregar imagenes a nuestra pagina tenemos las etiquetas de image -->
+	<img src="imagen.jpg" alt="texto alternativo" height="" width="">
+
+	<hr>
+	<!-- Estilos -->
+	<!-- Aplicacion de estilos, 
+	Estilos aplicados directamente en la etiqueta
+	Mediante un bloque de estilos en la cabeza
+	Estilos aplicados desde un archivo externo -->
+	
+	<!-- ancho y alto -->
+	<!-- Color de fondo -->
+	<section style="width: 90%; height: 150px; background-color: yellow;">
+		
+	</section>
+
+	<hr>
+	<!-- Formas de aplicar colores a los textos
+		
+	rgb, hexadecimal y nombre del color
+	rgb = rojo, verde, azul, cantidad maxima 255, minima 0
+	hexadecimal = rojo, verde, azul, cantidad maxima f, minima 0
+	Nombre de los colores = https://htmlcolorcodes.com/es/ -->
+	<p style="color: darkred">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, cupiditate excepturi? Nam incidunt fuga dolorum ab quod, vero facere, temporibus officiis aut quidem excepturi dicta voluptates corporis! Officiis, nihil dolores.
+	</p>
+
+	<hr>
+	
+	<!-- Tamaños de fuente -->
+	<p style="font-size: 25px">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam officiis ratione, eos magni optio unde sequi. Accusamus obcaecati quas non facere modi earum mollitia, saepe ad, quisquam aliquid! Quia, cum?
+	</p>
+	
+	<hr>
+
+	<!-- Familias de fuentes -->
+	<!-- https://www.w3schools.com/cssref/css_websafe_fonts.asp -->
+	<p style='font-family:"Lucida Console", Monaco, monospace'>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error velit, labore voluptate ratione voluptatum fugiat quia soluta doloremque incidunt sint tempora, enim voluptatem voluptas consectetur veritatis vitae reprehenderit itaque nostrum!
+	</p>
+
+	<hr>
+	
+	<!-- aplicando estilos en la cabecera -->
+	<a href="">Este es un texto de enlace</a>
+
+	<hr>
+
+	<!-- Alineaciones de texto -->
+	<!-- CSS cascade style shet -->
+	<p class="textoClass">
+		Hola, soy un texto con una clase
+	</p>
+
+	<hr>
+
+	<p id="textoId">
+		Hola, soy un texto con un identificador
+	</p>
+
+	<hr>
+
+	<!-- Formateo de texto en HTML -->
+	<b>Negrillas</b> <br>
+	<i>Cursiva</i> <br>
+	<small>Texto pequeño</small> <br>
+	<mark>Texto resaltado</mark> <br>
+	<del>Texto tachado</del> <br>
+	<ins>Texto subrayado</ins> <br>
+	Subindice<sub>10</sub> <br>
+	Superindice<sup>10</sup> <br>
+
+	<!-- Referencias o Citas -->
+	<q>Citas Cortas</q> <br>
+	<blockquote>Referencias mas enmarcada</blockquote> <br>
+	<abbr title="posdata">PD</abbr> <br>
+	<address>Direcciones</address> <br>
+	<cite>Cita</cite> <br>
+	<bdo dir="rtl">Este texto esta escrito al reves</bdo>
+
+	<!-- Enlaces -->
+	<!-- rutas -->
+	<!-- index->subpagina1->pagina2->pagina1->index -->
+	<a href="carpeta1/subcarpeta1/subpagina1.html">Este enlace dirige hacia la subpagina 1</a>
+	
+
+	<!-- Tablas -->
+	<table style="margin-top: 50px;">
+		<caption>
+			<h2>Titulo de la tabla</h2>
+		</caption>
+		<thead>
+			<th>Nombre</th>
+			<th colspan="2">Apellido</th>
+			<th>Telefono</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Javier</td>
+				<td>Yucra</td>
+				<td>Zapata</td>
+				<td>70190260</td>
+			</tr>
+			<tr>
+				<th rowspan="2">Habilidades</th>
+				<td colspan="3">Desarrollador Front End</td>
+			</tr>
+			<tr>
+				<td colspan="3">Desarrollador Back End</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Listas -->
+	<!-- 
+	Existen tres tipos de listas
+	Ordenadas
+	Desordenadas
+	Descriptivas -->
+	
+	<h2>Creacion de un sitio web</h2>
+	<small><i>Siga los siguientes pasos</i></small>
+	<!-- type
+	1 numerico
+	A letras mayusculas
+	a letras minusculas
+	I numeros romanos
+	i numero romanos en minusculas
+	 -->
+	<ol type="i">
+		<li>Crear la estructura html</li>
+		<li>Asignarle los metadatos</li>
+		<li>Agregar estilos al documento</li>
+		<li>Generar el contenido</li>
+	</ol>
+	
+
+	<h2>Lista de tareas pendientes</h2>
+	<ul>
+		<li>Realizar el trabajo de investigacion</li>
+		<li>Cocinar</li>
+		<li>Salir de compras</li>
+	</ul>
+	
+	<h2>Lista Descriptiva</h2>
+	<dl>
+		<dt>Xiami redmi note 8</dt>
+		<dd>Memoria Ram 4gb, Memoria Interna 64gb</dd>
+		<dt>Honor 9x</dt>
+		<dd>Memoria Ram 6gb, Memoria Interna 128gb</dd>
+	</dl>
+
+
+	<!-- Formularios -->
+	<hr>
+
+	<!-- Tarea, investigar cuando es mas conveniente usar tablas y cuando listas
+	ademas crear 5 ejemplos de cada cual  -->
+
+	<form action="" method="">
+		<!-- la etiqueta form es un contenedor para
+		diferentes elementos de entrada
+		campos de texto, numericos, fechas, contraseñas
+		opciones seleccionables
+		casillas de verificacion
+		botones -->
+		
+		<!-- El atributo type define el tipo de input que sera
+		text,number,date,password,radio -->
+		
+		<fieldset>
+			<legend>Datos Personales</legend>
+				<div>
+					<label for="nombre">Nombre</label>
+					<input type="text" placeholder="Ingrese su nombre" name="nombre" id="nombre">
+				</div>
+
+				<div>
+					<label for="apellido">Apellido</label>
+					<input type="text" placeholder="Ingrese su apellido" name="apellido" id="apellido" autocomplete="off">
+				</div>
+			</fieldset>
+
+		<div>
+			<label for="email">Email</label>
+			<input type="email" placeholder="Ingrese su correo" name="email" id="email" autocomplete="off">
+		</div>
+
+		<div>
+			<label for="">Password</label>
+			<input type="password">
+		</div>
+		
+		<div>
+			<label for="">Password</label>
+			<input type="date">
+		</div>
+
+		<div>
+			<label for="">Color</label>
+			<input type="color">
+		</div>
+
+		<div>
+			<label for="">Telefono</label>
+			<input type="number" min="0" max="9999" maxlength="4" step="5">
+		</div>
+
+		<div>
+			<label for="">Rango</label>
+			<input type="range" min="0" max="100">
+		</div>
+		
+		<!-- Igual a input tipo text -->
+		<div>
+			<label for="">Buscador</label>
+			<input type="search" size="120">
+		</div>
+
+		<div>
+			<label for="">Celular</label>
+			<input type="tel">
+		</div>
+
+		<div>
+			<label for="">Hora</label>
+			<input type="time">
+		</div>
+
+		<div>
+			<label for=""></label>
+			<input type="url">
+		</div>
+
+		<div>
+			<label for=""></label>
+			<input type="week">
+		</div>
+
+		<div>
+			<label for=""></label>
+			<input type="file">
+		</div>
+
+		<div>
+			<!-- Lista desplegable -->
+			<label for="">Ciudad</label>
+			<select name="lista" id="lista">
+				<option selected disabled>Seleccione una opcion</option>
+				<option value="">La Paz</option>
+				<option value="">Santa Cruz</option>
+				<option value="">Cochabamba</option>
+				<option value="">Tarija</option>
+			</select>
+		</div>
+
+		<div>
+			<label for="mensaje">Mensaje</label>
+			<textarea name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Ingrese su mensaje" autocomplete="off"></textarea>
+		</div>
+		
+
+		<div>
+			<input type="radio" name="genero" id="genero">
+			<label for="genero">Hombre</label>
+
+			<input type="radio" name="genero" id="genero">
+			<label for="genero">Mujer</label>
+
+			<input type="radio" name="genero" id="genero">
+			<label for="genero">Otro</label>
+		</div>
+
+
+		<div>
+			<input type="checkbox" name="check1">
+			<label for=""><small>He leido y acepto los terminos de privacidad</small></label>
+		</div>
+
+
+		<div>
+			<button type="submit">Enviar Datos</button>
+			<button type="reset">Limpiar formulario</button>
+			<button type="button">Sin accion</button>
+			<button type="submit" formmethod="post" formaction="archivo.php">Enviar a otro servicio</button>
+		</div>
+
+		<!-- atributos especiales -->
+		<div>
+			<label for="">Input con atributos</label>
+			<input type="text" placeholder="texto de ayuda" autofocus autocomplete required>
+			<!-- Año, mes, dia -->
+		</div>
+
+		<div>
+			<label for="">Carga de archivos multiple</label>
+			<input type="file" multiple>
+		</div>
+
+		<div>
+			<label for="">Tamaño maximo</label>
+			<input type="text" placeholder="nombre de usuario" maxlength="10" minlength="5">
+		</div>
+		
+		
+		<!-- Agrupacion de datos fieldset -->
+
+	</form>
+
+
+	<br><br><br><br>
+
+
+	<!-- Enlace hacia un programa escrito en javascript, que se encarga de toda la parte
+	logica de nuestro sitio -->
+	<script type="text/javascript" src="script.js"></script>
+	
+
+	<script>
+		
+	</script>
+</body>
+</html>	

@@ -1,0 +1,59 @@
+.textoClass{
+	font-size: 40px;
+	margin-top: 45px;
+	color: red;
+	/*Sombras en el texto*/
+	/*
+	sombra a la derecha
+	sombra hacia abajo
+	difuminacion
+	opacidad
+	*/
+	/*text-shadow: 25px 15px 7px red*/
+	text-shadow: 25px 15px 7px rgba(206,89,55,0.9);
+	/*https://html-css-js.com/css/generator/text-shadow/*/
+	text-align: center;
+}
+
+#textoId{
+	font-size: 20px;
+	color: orange;
+	text-align: right;
+}
+
+table{
+	border-spacing: 15px;
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+
+	/*border: 1px solid black;*/
+	
+	width: 50%;
+	/*Elimina los espacios entre celdas*/
+	/*border-collapse: collapse;*/
+}
+
+th {
+	border: 1px solid red;
+}
+
+td{
+	text-align: center;
+	border: 1px solid green;
+}
+
+
+ul>li{
+	/*circle, square, disc*/
+	list-style-type: square;
+}
+
+
+input{
+	margin-bottom: 15px;
+}
+
+/*Realizar hover pseudoclases estado del elemento seleccionado*/
+
